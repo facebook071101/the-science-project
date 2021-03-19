@@ -44,22 +44,34 @@ basic.forever(function () {
                 basic.pause(1000)
                 basic.showIcon(IconNames.Sad)
             } else {
-                if (The_total_amount_of_coins >= 16 && The_total_amount_of_coins < 20) {
+                if (The_total_amount_of_coins >= 10 && The_total_amount_of_coins < 20) {
                     basic.showNumber(The_total_amount_of_coins)
                     basic.pause(1000)
-                    basic.showIcon(IconNames.Happy)
+                    basic.showIcon(IconNames.Asleep)
                 } else {
-                    if (The_total_amount_of_coins >= 20 && The_total_amount_of_coins < 30) {
+                    if (The_total_amount_of_coins >= 16 && The_total_amount_of_coins < 20) {
                         basic.showNumber(The_total_amount_of_coins)
                         basic.pause(1000)
-                        basic.showIcon(IconNames.Heart)
+                        basic.showString("Good")
+                        basic.pause(1000)
+                        basic.showIcon(IconNames.Happy)
                     } else {
-                        if (The_total_amount_of_coins >= 30) {
+                        if (The_total_amount_of_coins >= 20 && The_total_amount_of_coins < 30) {
                             basic.showNumber(The_total_amount_of_coins)
                             basic.pause(1000)
-                            basic.showIcon(IconNames.Happy)
+                            basic.showString("Very good")
                             basic.pause(1000)
                             basic.showIcon(IconNames.Heart)
+                        } else {
+                            if (The_total_amount_of_coins >= 30) {
+                                basic.showNumber(The_total_amount_of_coins)
+                                basic.pause(1000)
+                                basic.showString("Excellent")
+                                basic.pause(1000)
+                                basic.showIcon(IconNames.Happy)
+                                basic.pause(1000)
+                                basic.showIcon(IconNames.Heart)
+                            }
                         }
                     }
                 }
