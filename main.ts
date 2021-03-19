@@ -21,7 +21,7 @@ let The_number_of_5_dollars_coins = 0
 let The_number_of_1_dollar_coins = 0
 The_number_of_1_dollar_coins = 0
 The_number_of_5_dollars_coins = 0
-The_situation = 0
+The_situation = 5
 basic.forever(function () {
     The_IRSensor = pins.analogReadPin(AnalogPin.P1)
     if (The_IRSensor < 50) {
@@ -44,7 +44,7 @@ basic.forever(function () {
                 basic.pause(1000)
                 basic.showIcon(IconNames.Sad)
             } else {
-                if (The_total_amount_of_coins >= 10 && The_total_amount_of_coins < 20) {
+                if (The_total_amount_of_coins >= 10 && The_total_amount_of_coins < 15) {
                     basic.showNumber(The_total_amount_of_coins)
                     basic.pause(1000)
                     basic.showIcon(IconNames.Asleep)
@@ -82,6 +82,13 @@ basic.forever(function () {
             The_number_of_1_dollar_coins = 0
             The_number_of_5_dollars_coins = 0
             basic.showNumber(The_total_amount_of_coins)
+        } else {
+            if (The_situation == 5) {
+                basic.showString("Please insert coins")
+                basic.pause(2000)
+                basic.showArrow(ArrowNames.South)
+                basic.pause(1000)
+            }
         }
     }
 })
